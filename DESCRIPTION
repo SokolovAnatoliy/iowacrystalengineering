@@ -1,0 +1,23 @@
+Package: iowacrystalengineering
+Title: A package to support a talk on data science in crystal engineering
+Version: 0.1.0
+Authors@R: 
+    person("Anatoliy", "Sokolov", , "ANSokolov@dow.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: A package for supporting the talk by Anatoliy Sokolov at the
+    2022 Midwest ACS Meeting
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Imports: 
+    dplyr,
+    gt,
+    gtExtras,
+    kableExtra,
+    knitr,
+    magrittr,
+    rlang,
+    tibble,
+    tools
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1

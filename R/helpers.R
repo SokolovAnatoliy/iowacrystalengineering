@@ -63,10 +63,14 @@ make_len_style_table = function(table, caption, format = "latex"){
 #' @param merge_cols a vector of two column names in the table to be merged
 #' @param images_col_name the name of the column that holds the path to the images
 #' @param container_size numeric for the size of the html container
+#' @param image_height the heigh of the images in the table
 #' @importFrom gt gt tab_header
 #' @importFrom gtExtras gt_theme_nytimes gt_merge_stack gt_img_rows
 #' @export
-make_cool_table = function(data, title, merge_cols = NULL, images_col_name = NULL, container_size = 450) {
+make_cool_table = function(data, title, merge_cols = NULL,
+                           images_col_name = NULL,
+                           container_size = 450,
+                           image_height = 30) {
 
 
   if(!is.null(merge_cols)){
@@ -89,7 +93,8 @@ make_cool_table = function(data, title, merge_cols = NULL, images_col_name = NUL
     }  %>%
     {
       if(length(images_col_name) == 1){
-        gtExtras::gt_img_rows(., columns = .data[[{{images_col_name}}]], height = 20, img_source = "local")
+        gtExtras::gt_img_rows(., columns = .data[[{{images_col_name}}]],
+                              height = image_height, img_source = "local")
       }
       else .
     } %>%

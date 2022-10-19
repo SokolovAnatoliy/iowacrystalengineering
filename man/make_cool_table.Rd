@@ -9,7 +9,8 @@ make_cool_table(
   title,
   merge_cols = NULL,
   images_col_name = NULL,
-  container_size = 450
+  container_size = 450,
+  image_height = 30
 )
 }
 \arguments{
@@ -22,6 +23,8 @@ make_cool_table(
 \item{images_col_name}{the name of the column that holds the path to the images}
 
 \item{container_size}{numeric for the size of the html container}
+
+\item{image_height}{the heigh of the images in the table}
 }
 \description{
 a function to make a table using gt

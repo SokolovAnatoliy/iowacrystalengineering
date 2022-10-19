@@ -44,7 +44,7 @@ make_len_style_table = function(table, caption, format = "latex"){
 
   table %>%
     knitr::kable(
-      format = "latex",
+      format = format,
       align = "l",
       booktabs = TRUE,
       longtable = FALSE,

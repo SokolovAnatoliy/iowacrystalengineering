@@ -35,10 +35,11 @@ show_me_a_logo = function(image, what_are_all_the_names = FALSE) {
 #' a function to lay out a table in exactly the way Len likes it.
 #' @param table a tibble or dataframe to be laid out
 #' @param caption a string that will be used as the caption for the table
+#' @param format arguments to the format function of kable. Defaults to latex
 #' @importFrom knitr kable
 #' @importFrom kableExtra linebreak kable_styling
 #' @export
-make_len_style_table = function(table, caption){
+make_len_style_table = function(table, caption, format = "latex"){
   column_names = names(table)
 
   table %>%

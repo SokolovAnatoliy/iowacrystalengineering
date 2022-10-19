@@ -4,12 +4,14 @@
 \alias{make_len_style_table}
 \title{a function to lay out a table in exactly the way Len likes it.}
 \usage{
-make_len_style_table(table, caption)
+make_len_style_table(table, caption, format = "latex")
 }
 \arguments{
 \item{table}{a tibble or dataframe to be laid out}
 
 \item{caption}{a string that will be used as the caption for the table}
+
+\item{format}{arguments to the format function of kable. Defaults to latex}
 }
 \description{
 a function to lay out a table in exactly the way Len likes it.
